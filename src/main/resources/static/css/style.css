@@ -1,0 +1,80 @@
+:root {
+  --maroon: #6E1B34;
+  --maroon-dark: #561428;
+  --gold: #C98A1B;
+  --gold-soft: #F6E7C8;
+  --paper: #F7F5F2;
+  --ink: #2A2226;
+  --line: #E4DED8;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, .stat-num {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.1px;
+}
+
+.site-header {
+  background: var(--maroon);
+  color: #fff;
+  border-bottom: 4px solid var(--gold);
+}
+.header-sub { color: #E9D6DC; font-size: 0.95rem; }
+
+.btn-gold { background: var(--gold); border-color: var(--gold); color: #fff; font-weight: 600; }
+.btn-gold:hover, .btn-gold:focus { background: #B07712; border-color: #B07712; color: #fff; }
+
+.btn-maroon { background: var(--maroon); border-color: var(--maroon); color: #fff; }
+.btn-maroon:hover, .btn-maroon:focus { background: var(--maroon-dark); border-color: var(--maroon-dark); color: #fff; }
+
+.btn:focus-visible, .form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(201, 138, 27, 0.4);
+  border-color: var(--gold);
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+.report-box { height: 100%; }
+
+.stat {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.stat-num { font-size: 1.7rem; line-height: 1.1; color: var(--maroon); }
+.stat-label { font-size: 0.85rem; color: #6a5f64; }
+
+.table thead th {
+  background: var(--gold-soft);
+  color: var(--ink);
+  border-bottom: 2px solid var(--gold);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-status { font-weight: 600; padding: 0.4em 0.7em; border-radius: 4px; }
+.badge-confirmed { background: #DDEFE3; color: #17623A; }
+.badge-pending   { background: #FFF0CC; color: #7A5200; }
+.badge-cancelled { background: #F6DADA; color: #8A1C1C; }
+
+.empty-note { color: #6a5f64; margin: 1rem 0 0; }
+
+@media (max-width: 575.98px) {
+  .site-header .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
